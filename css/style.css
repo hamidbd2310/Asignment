@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.nav-link:hover{
+    color: #06d18a;
+}
+
+img{
+    height: 300px;
+    width: 200px !important;
+}
+
+.card-container{
+    display: grid;
+    
+  }
+
+/*Clock*/
+
+.clock-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.digit {
+    display: inline-block;
+    padding: 5px;
+    font-size: 60px;
+    margin: 0 10px;
+    color: #17D4FE;
+    letter-spacing: 7px;
+}
+#second{
+    animation: flip 1s infinite;
+    -webkit-animation: flip 1s infinite;
+}
+
+@keyframes flip {
+   
+    100% {
+      transform: rotatex(-360deg);
+      -webkit-transform: rotatex(-360deg);
+      -moz-transform: rotatex(-360deg);
+      -ms-transform: rotatex(-360deg);
+      -o-transform: rotatex(-360deg);
+}
+  }

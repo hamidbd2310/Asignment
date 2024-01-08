@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Code</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg shadow-sm border-bottom">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <span class="text-success">MERN </span><span class="text-danger">STACK</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/html.html">HTML Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/css.html">CSS Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 active" href="/js.html">JS Code</a>
+                </li>
+                <li class="nav-item">
+                    <!-- Dark Mode Switcher -->
+                    <div class="form-check form-switch mx-4 mt-2">
+                        <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheck" checked onclick="darkModeBtn()">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--Main Section-->
+    <div class="container overflow-auto shadow-lg" style="height: 600px; margin-top: 50px;">
+       <div class="m-3">
+            <xmp>
+              function darkModeBtn() {
+                let element = document.body;
+                element.dataset.bsTheme=element.dataset.bsTheme === 'dark' ? 'light' : 'dark';
+                localStorage.setItem('mode', element.dataset.bsTheme);
+                
+              }
+              function setThemeOnLoad() {
+                let savedTheme = localStorage.getItem('mode');
+                if (savedTheme) {
+                  document.body.dataset.bsTheme = savedTheme;
+                }
+              }
+              /*
+              document.getElementById('darkModeToggleBtn').addEventListener('click', function() {
+                toggleDarkModeBtn();
+              });*/
+            
+              setThemeOnLoad();
+            
+            
+            
+              let ageInput = document.getElementById('ageInput');
+              let customRange = document.getElementById('customRange');
+              
+              ageInput.addEventListener('input', function() {
+                let age = ageInput.value;
+                let childCard = document.getElementById('childCard');
+                let adultCard = document.getElementById('adultCard');
+              
+                if (age >= 18) {
+                  childCard.style.display = 'none';
+                  adultCard.style.display = 'block';
+                } else {
+                  childCard.style.display = 'block';
+                  adultCard.style.display = 'none';
+                }
+                document.getElementById('age').innerHTML = 'Your Age is : ' + age;
+              });
+              
+              customRange.addEventListener('input', function() {
+                let age = customRange.value;
+                let childCard = document.getElementById('childCard');
+                let adultCard = document.getElementById('adultCard');
+              
+                if (age >= 18) {
+                  childCard.style.display = 'none';
+                  adultCard.style.display = 'block';
+                } else {
+                  childCard.style.display = 'block';
+                  adultCard.style.display = 'none';
+                }
+                document.getElementById('age').innerHTML = 'Your Age is : ' + age;
+              });
+              
+            
+              //Clock
+              function updateClock() {
+                var dateNow = new Date();
+                var hour = ('0' + dateNow.getHours() % 12).slice(-2); 
+                var minute = ('0' + dateNow.getMinutes()).slice(-2); 
+                var second = ('0' + dateNow.getSeconds()).slice(-2); 
+                var AMPM = hour <= 12 ? 'PM' : 'AM';
+              
+                document.getElementById("hour").innerHTML = hour;
+                document.getElementById("minute").innerHTML = minute;
+                document.getElementById("second").innerHTML = second;
+                document.getElementById("AMPM").innerHTML = AMPM;
+              }
+              
+              setInterval(updateClock, 1000);
+              
+            
+            </xmp>
+       </div>
+    </div>
+
+<footer class="text-center mt-5 fixed-bottom bg-dark text-light">
+    <p>2024 &copy; Abdul Hamid. All rights reserved.</p>
+</footer>
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Code</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg shadow-sm border-bottom">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <span class="text-success">MERN </span><span class="text-danger">STACK</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/html.html">HTML Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 active" href="/css.html">CSS Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/js.html">JS Code</a>
+                </li>
+                <li class="nav-item">
+                    <!-- Dark Mode Switcher -->
+                    <div class="form-check form-switch mx-4 mt-2">
+                        <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheck" checked onclick="darkModeBtn()">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--Main Section-->
+    <div class="container overflow-auto shadow-lg" style="height: 600px; margin-top: 50px;">
+       <div class="m-3">
+            <xmp>*{
+                margin: 0;
+                padding: 0;
+            }
+            
+            .navbar-brand{
+                font-weight: bold;
+                font-size: 20px;
+                letter-spacing: 3px;
+            }
+            .nav-link:hover{
+                color: #06d18a;
+            }
+            
+            img{
+                height: 300px;
+                width: 200px !important;
+            }
+            
+            .card-container{
+                display: grid;
+                
+              }
+            
+            /*Clock*/
+            
+            .clock-container{
+                display: flex;
+                justify-content: center;
+            }
+            
+            
+            .digit {
+                display: inline-block;
+                padding: 5px;
+                font-size: 60px;
+                margin: 0 10px;
+                color: #17D4FE;
+                letter-spacing: 7px;
+            }
+            #second{
+                animation: flip 1s infinite;
+                -webkit-animation: flip 1s infinite;
+            }
+            
+            @keyframes flip {
+               
+                100% {
+                  transform: rotatex(-360deg);
+                  -webkit-transform: rotatex(-360deg);
+                  -moz-transform: rotatex(-360deg);
+                  -ms-transform: rotatex(-360deg);
+                  -o-transform: rotatex(-360deg);
+            }
+              }
+            </xmp>
+       </div>
+    </div>
+
+<footer class="text-center mt-5 fixed-bottom bg-dark text-light">
+    <p>2024 &copy; Abdul Hamid. All rights reserved.</p>
+</footer>
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>
