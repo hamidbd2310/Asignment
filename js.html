@@ -106,7 +106,7 @@
                 var hour = ('0' + dateNow.getHours() % 12).slice(-2); 
                 var minute = ('0' + dateNow.getMinutes()).slice(-2); 
                 var second = ('0' + dateNow.getSeconds()).slice(-2); 
-                var AMPM = hour <= 12 ? 'PM' : 'AM';
+                var AMPM = hour >= 12 ? 'PM' : 'AM';
               
                 document.getElementById("hour").innerHTML = hour;
                 document.getElementById("minute").innerHTML = minute;
